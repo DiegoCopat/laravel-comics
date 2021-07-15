@@ -1,1 +1,15 @@
-//
+@import 'partials/_header.scss';
+@import 'partials/_main.scss';
+@import 'partials/_footer.scss';
+
+*{
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+}
+
+.wrapper {
+    width: 75%; 
+    height: 100%;
+    margin: auto;
+}
