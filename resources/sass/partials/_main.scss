@@ -1,5 +1,82 @@
 .jumbotron {
     width: 100%; 
     height: 300px;
-    background-image: url(img/jumbotron.jpg);
+
+    .main-top {
+        width: 100%; 
+        height: 300px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    
+}
+.main-center {
+    height: calc(100vh - 400px);
+    min-height: 320px;
+
+    .cards {
+        display: flex;
+        align-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 30px 10px 10px 10px; 
+        
+        .card {
+            width: calc(100% / 6);
+            padding: 5px;
+
+            .image-contain {
+                width: 100%; 
+                height: 100px;
+
+                img {
+                    object-fit: cover;
+                    object-position: top;
+                    width: 100%;
+                    height: 100px;
+                }
+            }
+
+            h2 {
+                font-size: 8px;
+                text-transform: uppercase;
+                color: $text-grey;
+                margin: 10px 0;
+            }
+        }
+        
+        
+    }
+}
+.main-bottom {
+
+    width: 100%; 
+    height: 100px;
+    background-color: $bg-main-bottom;
+
+    ul {
+        display: flex;
+        width: 100%;
+        height: 100%; 
+
+        li {
+            display: flex;
+            height: 100%;
+            list-style: none; 
+            display: inline-block;
+            margin: auto;
+
+            a {
+                line-height: 100px;
+                
+                margin: auto;
+                color: $white; 
+            }
+
+        }
+    }
 }

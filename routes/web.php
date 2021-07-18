@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     $data = [
         "navbar" => [
+        
             "characters",
             "comics",
             "movies",
@@ -26,7 +27,19 @@ Route::get('/', function () {
             "fans",
             "news",
             "shop"
+        ],
+        "propriety" => [
+            "digital comics",
+            "dc merchandise",
+            "subscription",
+            "comic shop locator",
+            "dc power visa"
         ]
     ];
-    return view('home', $data);
+    $dataComics = config("dataComics");
+
+    return view('home', $data, 
+    [
+        "comics" => $dataComics,
+    ]);
 });

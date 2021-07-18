@@ -5,6 +5,8 @@ body {
 
 body header {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 50px;
   background-color: white;
@@ -25,12 +27,89 @@ body header ul li a {
   list-style: none;
   text-decoration: none;
   color: #4F5051;
+  text-transform: uppercase;
 }
 
 .jumbotron {
   width: 100%;
   height: 300px;
-  background-image: url();
+}
+
+.jumbotron .main-top {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.jumbotron .main-top img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-center {
+  height: calc(100vh - 400px);
+  min-height: 320px;
+}
+
+.main-center .cards {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 30px 10px 10px 10px;
+}
+
+.main-center .cards .card {
+  width: calc(100% / 6);
+  padding: 5px;
+}
+
+.main-center .cards .card .image-contain {
+  width: 100%;
+  height: 100px;
+}
+
+.main-center .cards .card .image-contain img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  width: 100%;
+  height: 100px;
+}
+
+.main-center .cards .card h2 {
+  font-size: 8px;
+  text-transform: uppercase;
+  color: #EDE6CA;
+  margin: 10px 0;
+}
+
+.main-bottom {
+  width: 100%;
+  height: 100px;
+  background-color: #0282F9;
+}
+
+.main-bottom ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.main-bottom ul li {
+  display: flex;
+  height: 100%;
+  list-style: none;
+  display: inline-block;
+  margin: auto;
+}
+
+.main-bottom ul li a {
+  line-height: 100px;
+  margin: auto;
+  color: white;
 }
 
 * {
@@ -39,9 +118,21 @@ body header ul li a {
   padding: 0;
 }
 
+body {
+  height: 100vh;
+  min-height: 320px;
+}
+
 .wrapper {
+  display: flex;
   width: 75%;
   height: 100%;
   margin: auto;
+}
+
+.wrapper a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
 }
 

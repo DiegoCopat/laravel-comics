@@ -6,10 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('resources/sass/app.scss') }}">
-        @yield('head')
         <title>@yield('page-title', 'Laravel | Comics')</title>
     </head>
+
     <body>
-        @include('partials.header')
+        <header>
+            @include('partials.header')
+        </header>
+        
+        <main>
+            @yield('main-top')
+            @yield('main-center')
+            @yield('main-bottom')
+        </main>
     </body>
+
 </html>
